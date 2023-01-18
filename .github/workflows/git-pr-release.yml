@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - master
+      - staging
 name: git-pr-release
 jobs:
   git-pr-release:
