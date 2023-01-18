@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - master
+name: git-pr-release
+jobs:
+  git-pr-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+      - name: git-pr-release
+        uses: bakunyo/git-pr-release-action@master
+        env:
+          GIT_PR_RELEASE_BRANCH_PRODUCTION: production
+          GIT_PR_RELEASE_BRANCH_STAGING: staging
+          GIT_PR_RELEASE_LABELS: pr-release
+          TZ: Asia/Tokyo
+
+

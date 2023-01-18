@@ -1,10 +1,10 @@
 on:
   push:
     branches:
-      - master
+      - production
 name: semantic-release
 jobs:
-  release-please:
+  semantic-please:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
