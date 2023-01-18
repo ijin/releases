@@ -4,7 +4,7 @@ on:
       - production
 name: semantic-release
 jobs:
-  semantic-please:
+  semantic-release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
